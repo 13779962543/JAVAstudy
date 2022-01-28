@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="qq:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/qq_jar</output-path>
+    <root id="archive" name="qq_jar.jar">
+      <element id="archive" name="qq.jar">
+        <element id="module-output" name="qq" />
+      </element>
+    </root>
+  </artifact>
+</component>
