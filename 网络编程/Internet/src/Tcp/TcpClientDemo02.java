@@ -9,22 +9,22 @@ import java.net.Socket;
 
 public class TcpClientDemo02 {
     public static void main(String[] args) throws Exception {
-        //1.´´½¨Ò»¸ösocketÁ¬½Ó
-         Socket socket=new Socket(InetAddress.getByName("127.0.0.1"),9000);
-         //2.´´½¨Ò»¸öÊä³öÁ÷
+        //1.åˆ›å»ºä¸€ä¸ªsocket
+        Socket socket=new Socket(InetAddress.getByName("127.0.0.1"),9000);
+        //2.åˆ›å»ºä¸€ä¸ªè¾“å‡ºæµ
         OutputStream os=socket.getOutputStream();
-        //3.¶ÁÈ¡ÎÄ¼þ
-        FileInputStream fis= new FileInputStream("D:\\JAVAÊµÑé\\ÍøÂç±à³Ì\\Internet\\src\\Tcp\\123.jpg");
-        //4.Ð´³öÎÄ¼þ
+        //3.è¯»å–æ–‡ä»¶
+        FileInputStream fis= new FileInputStream("D:\\Dev-Cpp\\123.jpg");
+        //4.å†™å‡ºæ–‡ä»¶
         byte[] buffer=new byte[1024];
         int len;
         while((len=fis.read(buffer))!=-1){
             os.write(buffer,0,len);
         }
-        //Í¨Öª·þÎñÆ÷ÒÑ¾­½áÊø
-        socket.shutdownOutput();//ÎÒÒÑ¾­´«ÊäÍêÁË
+        //ç¡®å®šæœåŠ¡å™¨æŽ¥æ”¶å®Œæ¯•äº†ï¼Œæ‰èƒ½æ–­å¼€è¿žæŽ¥
+        socket.shutdownOutput();//String byte[]
 
-        //È·¶¨·þÎñÆ÷½ÓÊÕÍê±Ï£¬²ÅÄÜ¶Ï¿ªÁ¬½Ó
+
         InputStream inputStream=socket.getInputStream();
         //String byte[]
         ByteArrayOutputStream baos=new ByteArrayOutputStream();
@@ -36,7 +36,7 @@ public class TcpClientDemo02 {
 
         System.out.println(baos.toString());
 
-        //2.¹Ø±Õ×ÊÔ´
+        //2.å…³é—­èµ„æº
         baos.close();
         inputStream.close();
         fis.close();

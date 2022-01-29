@@ -1,5 +1,7 @@
 package Tcp;
 
+
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -7,13 +9,13 @@ import java.net.Socket;
 
 public class TcpServerDemo02 {
     public static void main(String[] args) throws Exception {
-        //1.´´½¨·şÎñ
+        //1.åˆ›å»ºæœåŠ¡å™¨
         ServerSocket serverSocket=new ServerSocket(9000);
-        //2.¼àÌı¿Í»§¶ËµÄÁ¬½Ó
-        Socket socket=serverSocket.accept();//×èÈûÊ½¼àÌı£¬»áÒ»Ö±µÈ´ı¿Í»§¶ËÁ¬½Ó
-        //3.»ñÈ¡ÊäÈëÁ÷
+        //2.ç›‘å¬å®¢æˆ·ç«¯çš„è¿æ¥
+        Socket socket=serverSocket.accept();
+        //3.è·å–è¾“å…¥æµ
         InputStream is=socket.getInputStream();
-        //4.ÎÄ¼şÊä³ö
+        //4.æ–‡ä»¶è¾“å‡º
         FileOutputStream fos= new FileOutputStream("receive.jpg");
         byte[] buffer= new byte[1024];
         int len;
@@ -21,10 +23,9 @@ public class TcpServerDemo02 {
             fos.write(buffer,0,len);
         }
 
-        //Í¨Öª¿Í»§¶Ë½ÓÊÕÍê±ÏÁË
+        //é€šçŸ¥å®¢æˆ·ç«¯æˆ‘æ¥å—å®Œæ¯•äº†
         OutputStream os=socket.getOutputStream();
-        os.write("½ÓÊÕÍê±Ï£¬¿ÉÒÔ¶Ï¿ªÁ¬½Ó".getBytes());
-        //¹Ø±Õ×ÊÔ´
+        os.write("It is ok".getBytes());
         fos.close();
         is.close();
         socket.close();

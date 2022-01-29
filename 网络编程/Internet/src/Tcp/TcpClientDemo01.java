@@ -6,22 +6,22 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-//客户端
+//锟酵伙拷锟斤拷
 public class TcpClientDemo01 {
     public static void main(String[] args) {
         Socket socket = null;
         OutputStream os = null;
 
         try {
-            //1.知道服务器的地址
+            //1.知鍒涘缓涓�涓猻ocket杩炴帴
             InetAddress serverIP = InetAddress.getByName("127.0.0.1");
-            //2.端口号
+            //2.鍒涘缓涓�涓緭鍑烘祦
             int port = 9999;
-            //3.创建一个socket连接
+            //3.璇诲彇鏂囦欢
             socket = new Socket(serverIP, port);
-            //3.发送消息 IO流
+            //3.锟斤拷锟斤拷锟斤拷息 IO锟斤拷
             os = socket.getOutputStream();
-            os.write("欢迎使用该程序".getBytes());
+            os.write("锟斤拷迎使锟矫该筹拷锟斤拷".getBytes());
 
         } catch (Exception e) {
             e.printStackTrace();
