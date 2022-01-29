@@ -3,14 +3,14 @@ package InternetStudy;
 import java.net.InetAddress;
 public class internet01 {
     public static void main(String[] args)throws Exception{
-        //»ñÈ¡±¾µØÖ÷»úInetAddress¶ÔÏó
+        //è·å–æœ¬åœ°ä¸»æœºInetAddresså¯¹è±¡
         InetAddress localAddress=InetAddress.getLocalHost();
-        //»ñÈ¡Ö÷»úÃûÎªwww.itcast.cnµÄInetAddress¶ÔÏó
+        //è·å–ä¸»æœºåä¸ºwww.itcast.cnçš„InetAddresså¯¹è±¡
         InetAddress remoteAddress=
                 InetAddress.getByName("www.itcast.cn");
-        System.out.println("±¾µØµÄIPµØÖ·£º"+localAddress.getHostAddress());
-        System.out.println("itcastµÄipµØÖ·£º"+remoteAddress.getHostAddress());
-        System.out.println("3ÃëÄÚÊÇ·ñ¿ÉÒÔ·ÃÎÊ:"+remoteAddress.isReachable(3000));
-        System.out.println("itcastµÄÖ÷»úÃûÎª:"+remoteAddress.getHostName());
+        System.out.println("æœ¬åœ°çš„IPåœ°å€ï¼š"+localAddress.getHostAddress());
+        System.out.println("itcastçš„ipåœ°å€ï¼š"+remoteAddress.getHostAddress());
+        System.out.println("3ç§’å†…æ˜¯å¦å¯ä»¥è®¿é—®:"+remoteAddress.isReachable(3000));
+        System.out.println("itcastçš„ä¸»æœºåä¸º:"+remoteAddress.getHostName());
     }
 }

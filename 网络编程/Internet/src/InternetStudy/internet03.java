@@ -10,8 +10,8 @@ public class internet03 {
         System.out.println(socketAddress2);
 
         System.out.println(socketAddress2.getAddress());
-        System.out.println(socketAddress2.getHostName());//µØÖ·
-        System.out.println(socketAddress2.getPort());//¶Ë¿Ú
+        System.out.println(socketAddress2.getHostName());//
+        System.out.println(socketAddress2.getPort());//
 
     }
 }
