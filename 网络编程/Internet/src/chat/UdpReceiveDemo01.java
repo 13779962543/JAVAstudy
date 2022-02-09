@@ -4,7 +4,7 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 
 public class UdpReceiveDemo01 {
-    public static void main(String[] args)throws Exception{
+    public static void main(String[] args) throws Exception{
         DatagramSocket socket=new DatagramSocket(6666);
 
         //准备接收包裹
