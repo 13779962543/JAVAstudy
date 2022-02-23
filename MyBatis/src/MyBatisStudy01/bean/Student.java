@@ -3,25 +3,26 @@ package MyBatisStudy01.bean;
 import java.util.Timer;
 
 public class Student {
-    private Integer id;
+    private Integer sid;
     private String name;
     private Integer age;
+
 
     public Student(){
 
     }
-    public Student(Integer id,String name,Integer age){
-        this.id=id;
+    public Student(Integer sid,String name,Integer age){
+        this.sid=sid;
         this.name=name;
         this.age=age;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getSid() {
+        return sid;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setSid(Integer sid) {
+        this.sid = sid;
     }
 
     public String getName() {
@@ -43,7 +44,7 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "id=" + id +
+                "id=" + sid +
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 '}';
