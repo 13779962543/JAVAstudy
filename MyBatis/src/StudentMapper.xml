@@ -9,17 +9,23 @@
     resultType属性:指定结果映射对象类型
     parameterType属性:指定参数映射对象类型
 -->
-    <select id="selectAll" resultType="MyBatisStudy01.bean.Student">
+    <select id="selectAll" resultType="student">
         SELECT * FROM student
     </select>
 
-    <select id="selectById" resultType="MyBatisStudy01.bean.Student" parameterType="java.lang.Integer">
+    <select id="selectById" resultType="student" parameterType="int">
         SELECT * FROM student WHERE sid= #{sid}
     </select>
 
-    <insert id="insert" parameterType="MyBatisStudy01.bean.Student">
+    <insert id="insert" parameterType="student">
         INSERT INTO student VALUES(#{sid},#{name},#{age})
     </insert>
 
+    <update id="update" parameterType="student">
+        UPDATE student SET name=#{name},age=#{age} WHERE sid=#{sid}
+    </update>
 
+    <delete id="delete" parameterType="int">
+        DELETE FROM student WHERE sid=#{sid}
+    </delete>
 </mapper>
