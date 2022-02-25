@@ -7,9 +7,14 @@
 <!--    引入数据库连接的配置文件-->
     <properties resource="jdbc.properties"/>
 
+<!--    配置LOG4J-->
+    <settings>
+        <setting name="logImpl" value="log4j"/>
+    </settings>
+
 <!--    起别名-->
     <typeAliases>
-        <typeAlias type="MyBatisStudy01.bean.Student" alias="student"/>
+        <typeAlias type="MyBatisStudy02.bean.Student" alias="student"/>
 <!--        <package name="MyBatisStudy01.bean"/>-->
     </typeAliases>
 
@@ -33,6 +38,6 @@
 <!--    mapper引入映射配置文件-->
     <mappers>
 <!--        mapper 引入指定的配置映射文件 resource属性指定映射配置文件的文件-->
-        <mapper resource="StudentMapper.xml"/>
+        <mapper resource="StudentMapper02.xml"/>
     </mappers>
 </configuration>
