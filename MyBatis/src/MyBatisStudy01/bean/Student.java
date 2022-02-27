@@ -2,7 +2,7 @@ package MyBatisStudy01.bean;
 
 import java.util.Timer;
 
-public class Student {
+public class Student extends MyBatisStudy02.bean.Student {
     private Integer sid;
     private String name;
     private Integer age;
