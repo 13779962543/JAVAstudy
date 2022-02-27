@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="MyBatisStudy02.mapper.StudentMapper">
+<mapper namespace="MyBatisStudy02.mapper.StudentMapper02">
+
+    <sql id="select">
+        SELECT * FROM student
+    </sql>
 
 <!--
     select:查询功能的标签
@@ -10,11 +14,11 @@
     parameterType属性:指定参数映射对象类型
 -->
     <select id="selectAll" resultType="student">
-        SELECT * FROM student
+        <include refid="select"/>
     </select>
 
     <select id="selectById" resultType="student" parameterType="int">
-        SELECT * FROM student WHERE sid= #{sid}
+        <include refid="select"/> WHERE sid= #{sid}
     </select>
 
     <insert id="insert" parameterType="student">
@@ -28,4 +32,28 @@
     <delete id="delete" parameterType="int">
         DELETE FROM student WHERE sid=#{sid}
     </delete>
+
+    <select id="selectCondition" resultType="student" parameterType="student">
+        <include refid="select"/>
+        <where>
+            <if test="sid != null">
+                sid=#{sid}
+            </if>
+            <if test="name != null">
+                AND name=#{name}
+            </if>
+            <if test="age != null">
+                AND age=#{age}
+            </if>
+        </where>
+    </select>
+
+    <select id="selectByIds" resultType="student" parameterType="list">
+        <include refid="select"/>
+        <where>
+            <foreach collection="list" open="sid IN(" close=")" item="id" separator=",">
+                #{id}
+            </foreach>
+        </where>
+    </select>
 </mapper>

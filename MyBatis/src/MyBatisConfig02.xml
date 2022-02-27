@@ -18,6 +18,11 @@
 <!--        <package name="MyBatisStudy01.bean"/>-->
     </typeAliases>
 
+<!--集成分页助手的插件    -->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>
+    
 <!--    environment配置数据库环境，环境有多个,default属性指定使用的是哪个-->
     <environments default="mysql">
 <!--        配置数据库环境,id属性唯一标识-->
