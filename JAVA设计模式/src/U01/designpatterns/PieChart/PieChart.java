@@ -1,6 +1,6 @@
-package designpatterns.PieChart;
+package U01.designpatterns.PieChart;
 
-import designpatterns.Chart.Chart;
+import U01.designpatterns.Chart.Chart;
 
 public class PieChart implements Chart {
     public PieChart(){

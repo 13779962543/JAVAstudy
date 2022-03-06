@@ -1,9 +1,9 @@
-package designpatterns.ChartFactory;
+package U01.designpatterns.ChartFactory;
 
-import designpatterns.Chart.Chart;
-import designpatterns.HistogramChart.HistogramChart;
-import designpatterns.LineChart.LineChart;
-import designpatterns.PieChart.PieChart;
+import U01.designpatterns.Chart.Chart;
+import U01.designpatterns.HistogramChart.HistogramChart;
+import U01.designpatterns.LineChart.LineChart;
+import U01.designpatterns.PieChart.PieChart;
 
 public class ChartFactory {
     public static Chart getChart(String type){

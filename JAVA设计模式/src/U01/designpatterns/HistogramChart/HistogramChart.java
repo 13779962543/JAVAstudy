@@ -1,6 +1,6 @@
-package designpatterns.HistogramChart;
+package U01.designpatterns.HistogramChart;
 
-import designpatterns.Chart.Chart;
+import U01.designpatterns.Chart.Chart;
 
 public class HistogramChart implements Chart {
     public HistogramChart(){

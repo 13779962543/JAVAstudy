@@ -1,6 +1,6 @@
-package designpatterns.LineChart;
+package U01.designpatterns.LineChart;
 
-import designpatterns.Chart.Chart;
+import U01.designpatterns.Chart.Chart;
 
 public class LineChart implements Chart {
     public LineChart(){

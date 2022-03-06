@@ -1,7 +1,7 @@
-package designpatterns.Client;
+package U01.designpatterns.Client;
 
-import designpatterns.Chart.Chart;
-import designpatterns.ChartFactory.ChartFactory;
+import U01.designpatterns.Chart.Chart;
+import U01.designpatterns.ChartFactory.ChartFactory;
 
 public class Client {
     public static void main(String args[]){
