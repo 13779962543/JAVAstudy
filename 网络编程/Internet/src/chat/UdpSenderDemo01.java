@@ -9,14 +9,14 @@ import java.nio.Buffer;
 
 public class UdpSenderDemo01 {
     public static void main(String[] args)throws Exception{
-        DatagramSocket socket=new DatagramSocket(12303);
+        DatagramSocket socket=new DatagramSocket(1230);
         //准备数据:控制台读取System.in
         BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));
 
         while (true){
             String data=reader.readLine();
             byte[] datas=data.getBytes();
-            DatagramPacket packet=new DatagramPacket(datas,0,datas.length,new InetSocketAddress("localhost",12333));
+            DatagramPacket packet=new DatagramPacket(datas,0,datas.length,new InetSocketAddress("192.168.0.197",12333));
 
             socket.send(packet);
             if(data.equals("bye")){

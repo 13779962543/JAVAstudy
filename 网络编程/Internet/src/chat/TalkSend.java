@@ -41,11 +41,11 @@ public class TalkSend implements Runnable {
                 if (data.equals("bye")) {
                     break;}
 
-                } catch(Exception e){
-                    e.printStackTrace();
-                }
-
-                socket.close();
+            } catch(Exception e){
+                e.printStackTrace();
             }
+
+            socket.close();
         }
     }
+}
