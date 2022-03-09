@@ -39,13 +39,14 @@ public class TalkSend implements Runnable {
                 DatagramPacket packet = new DatagramPacket(datas, 0, datas.length, new InetSocketAddress(this.toIP, this.toPort));
                 socket.send(packet);
                 if (data.equals("bye")) {
-                    break;}
+                    break;
+                }
 
             } catch(Exception e){
                 e.printStackTrace();
             }
 
-            socket.close();
+//            socket.close();
         }
     }
 }

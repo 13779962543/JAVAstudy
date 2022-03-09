@@ -26,7 +26,7 @@ public class TalkReceive implements Runnable{
         while(true){
 
             try {
-                byte[] container=new byte[1024];
+                byte[] container=new byte[102400];
 
                 DatagramPacket packet=new DatagramPacket(container,0,container.length);
                 socket.receive(packet);
@@ -42,6 +42,6 @@ public class TalkReceive implements Runnable{
             }
 
         }
-        socket.close();
+//        socket.close();
     }
 }
