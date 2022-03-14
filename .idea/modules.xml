@@ -4,12 +4,14 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GUI/GUI.iml" filepath="$PROJECT_DIR$/GUI/GUI.iml" />
       <module fileurl="file://$PROJECT_DIR$/JAVA基础学习/GUI学习.iml" filepath="$PROJECT_DIR$/JAVA基础学习/GUI学习.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA.iml" filepath="$PROJECT_DIR$/JAVA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVAScript/JAVAScript.iml" filepath="$PROJECT_DIR$/JAVAScript/JAVAScript.iml" />
       <module fileurl="file://$PROJECT_DIR$/JAVA基础学习/JAVA基础学习.iml" filepath="$PROJECT_DIR$/JAVA基础学习/JAVA基础学习.iml" />
-      <module fileurl="file://$PROJECT_DIR$/JAVA实验.iml" filepath="$PROJECT_DIR$/JAVA实验.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA设计模式/JAVA设计模式.iml" filepath="$PROJECT_DIR$/JAVA设计模式/JAVA设计模式.iml" />
       <module fileurl="file://$PROJECT_DIR$/JAVA进阶学习/JAVA进阶学习.iml" filepath="$PROJECT_DIR$/JAVA进阶学习/JAVA进阶学习.iml" />
       <module fileurl="file://$PROJECT_DIR$/JDBC/JDBC.iml" filepath="$PROJECT_DIR$/JDBC/JDBC.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaWeb/JavaWeb.iml" filepath="$PROJECT_DIR$/JavaWeb/JavaWeb.iml" />
-      <module fileurl="file://$PROJECT_DIR$/qq/qq.iml" filepath="$PROJECT_DIR$/qq/qq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyBatis/MyBatis.iml" filepath="$PROJECT_DIR$/MyBatis/MyBatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/网络编程/网络编程.iml" filepath="$PROJECT_DIR$/网络编程/网络编程.iml" />
     </modules>
   </component>

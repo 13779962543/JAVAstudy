@@ -124,7 +124,7 @@ public class ATMSystem {
 
     /**
      修改当前账户对象的密码
-     * @param acc
+     * @paramacc
      */
     private static void updatePassWord(Account acc, Scanner sc) {
         // 1、判断旧密码是否正确

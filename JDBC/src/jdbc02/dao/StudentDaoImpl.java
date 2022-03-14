@@ -1,6 +1,7 @@
 package jdbc02.dao;
 
 import jdbc02.domain.Student;
+import jdbc02.utils.JDBCUtils;
 
 import java.sql.*;
 import java.text.SimpleDateFormat;
@@ -19,9 +20,8 @@ public class StudentDaoImpl implements StudentDao {
         ResultSet rs = null;
         try {
             //1.注册驱动
-            Driver driver=new com.mysql.jdbc.Driver();
             // 2.获取数据库链接
-            con = DriverManager.getConnection("jdbc:mysql://192.168.0.105:3306/bookshop", "root", "root");
+            con= JDBCUtils.getConnection();
             //3.获取执行者对象
             stat = con.createStatement();
             //4.执行sql语句，并接收返回的结果集
@@ -43,23 +43,7 @@ public class StudentDaoImpl implements StudentDao {
             e.printStackTrace();
         } finally {
             //6.释放资源
-            if (con != null) {
-                try {
-                    con.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-                try {
-                    stat.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-                try {
-                    rs.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
+          JDBCUtils.close(con,stat,rs);
         }
         //将集合对象返回
         return list;
@@ -76,9 +60,8 @@ public class StudentDaoImpl implements StudentDao {
         ResultSet rs = null;
         try {
             //1.注册驱动
-            Driver driver=new com.mysql.jdbc.Driver();
             // 2.获取数据库链接
-            con = DriverManager.getConnection("jdbc:mysql://192.168.0.105:3306/bookshop", "root", "root");
+            con= JDBCUtils.getConnection();
             //3.获取执行者对象
             stat = con.createStatement();
             //4.执行sql语句，并接收返回的结果集
@@ -102,23 +85,7 @@ public class StudentDaoImpl implements StudentDao {
             e.printStackTrace();
         } finally {
             //6.释放资源
-            if (con != null) {
-                try {
-                    con.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-                try {
-                    stat.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-                try {
-                    rs.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
+            JDBCUtils.close(con,stat,rs);
         }
         //将集合对象返回
         return stu;
@@ -133,9 +100,8 @@ public class StudentDaoImpl implements StudentDao {
         int result=0;
         try {
             //1.注册驱动
-            Driver driver=new com.mysql.jdbc.Driver();
             // 2.获取数据库链接
-            con = DriverManager.getConnection("jdbc:mysql://192.168.0.105:3306/bookshop", "root", "root");
+            con= JDBCUtils.getConnection();
             //3.获取执行者对象
             stat = con.createStatement();
             //4.执行sql语句，并接收返回的结果集
@@ -149,19 +115,7 @@ public class StudentDaoImpl implements StudentDao {
             e.printStackTrace();
         } finally {
             //6.释放资源
-            if (con != null) {
-                try {
-                    con.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-                try {
-                    stat.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-
-            }
+           JDBCUtils.close(con,stat);
         }
         //将集合对象返回
         return result;
@@ -176,9 +130,8 @@ public class StudentDaoImpl implements StudentDao {
         int result=0;
         try {
             //1.注册驱动
-            Driver driver=new com.mysql.jdbc.Driver();
             // 2.获取数据库链接
-            con = DriverManager.getConnection("jdbc:mysql://192.168.0.105:3306/bookshop", "root", "root");
+            con= JDBCUtils.getConnection();
             //3.获取执行者对象
             stat = con.createStatement();
             //4.执行sql语句，并接收返回的结果集
@@ -192,19 +145,7 @@ public class StudentDaoImpl implements StudentDao {
             e.printStackTrace();
         } finally {
             //6.释放资源
-            if (con != null) {
-                try {
-                    con.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-                try {
-                    stat.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-
-            }
+           JDBCUtils.close(con,stat);
         }
         //将集合对象返回
         return result;
@@ -219,9 +160,8 @@ public class StudentDaoImpl implements StudentDao {
         int result=0;
         try {
             //1.注册驱动
-            Driver driver=new com.mysql.jdbc.Driver();
             // 2.获取数据库链接
-            con = DriverManager.getConnection("jdbc:mysql://192.168.0.105:3306/bookshop", "root", "root");
+            con= JDBCUtils.getConnection();
             //3.获取执行者对象
             stat = con.createStatement();
             //4.执行sql语句，并接收返回的结果集
@@ -232,19 +172,7 @@ public class StudentDaoImpl implements StudentDao {
             e.printStackTrace();
         } finally {
             //6.释放资源
-            if (con != null) {
-                try {
-                    con.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-                try {
-                    stat.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-
-            }
+            JDBCUtils.close(con,stat);
         }
         //将集合对象返回
         return result;
