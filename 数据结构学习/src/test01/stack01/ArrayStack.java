@@ -1,4 +1,4 @@
-package test01.stack;
+package test01.stack01;
 
 
 class ArrayStack {
