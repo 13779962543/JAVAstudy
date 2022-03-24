@@ -4,7 +4,7 @@ public class Queue8 {
 
     //定义一个max表示共有多少个皇后
     int max = 8;
-    //定义数组arr,保存皇后放置位置的结果，比如arr = {0 , 4, 7, 5, 2, 6, 1, 3}
+    //定义数组arr,保存皇后放置位置的结果，比如arr = {0, 4, 7, 5, 2, 6, 1, 3}
     int[] array = new int[max];
     static int count = 0;
     static int judgeCount = 0;
@@ -12,7 +12,7 @@ public class Queue8 {
         //测试一把，8皇后是否正确
         Queue8 queue8 = new Queue8();
         queue8.check(0);
-        System.out.printf("一共有%d解法", count);
+        System.out.printf("一共有%d解法\n", count);
         System.out.printf("一共判断冲突的次数%d次", judgeCount); // 1.5w
 
     }
@@ -50,7 +50,7 @@ public class Queue8 {
         judgeCount++;
         for(int i = 0; i < n; i++) {
             //说明
-            //1. array[们]==array[n]表示判断第n个皇后是否和前面的n-1个皇后在同一列
+            //1. array[n]==array[n]表示判断第n个皇后是否和前面的n-1个皇后在同一列
             //2.Math.abs(n-i)=—Math.abs(array[n] - array[i])表示判断第n个皇后是否和第i皇后是否在同一斜线
             // n= 1放置第2列1 n= 1 array[1]=1
             // Math.abs(1-0))== 1 Math.abs(array[n] - array[i])=Math.abs(1-0)=1
