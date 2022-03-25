@@ -3,9 +3,10 @@ package movieapp.run;
 import movieapp.bean.Business;
 import movieapp.bean.Customer;
 import movieapp.bean.Movie;
+import movieapp.bean.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import movieapp.bean.User;
+
 
 import java.math.BigDecimal;
 import java.text.ParseException;
@@ -107,9 +108,9 @@ public class MovieSystem {
                     login();
                     break;
                 case "2":
-                    //
                     break;
                 case "3":
+                    showBusinessMain();
                     break;
                 default:
                     System.out.println("命令有误，请确认！");
