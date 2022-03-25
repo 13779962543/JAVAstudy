@@ -328,7 +328,7 @@ public class MovieSystem {
         System.out.println("================上架电影====================");
         // 根据商家对象(就是登录的用户loginUser)，作为Map集合的键 提取对应的值就是其排片信息 ：Map<movieapp.bean.Business , List<movieapp.bean.Movie>> ALL_MOVIES
         Business business = (Business) loginUser;
-        List<Movie> movies = ALL_MOVIES.get(business);
+        List<movieapp.bean.Movie> movies = ALL_MOVIES.get(business);
 
         System.out.println("请您输入新片名：");
         String name  = SYS_SC.nextLine();
